@@ -13,7 +13,7 @@
 					const obj = this.el.getObject3D('mesh');
            				// Go over the submeshes and modify materials we want.
             				obj.traverse(node => {
-						console.log("Looking by name 031...");
+						console.log("Looking by name 032...");
 						if (node.name !== -1) {
 							console.log("Found Something");
 							//node.material.color.set('green');
@@ -98,10 +98,10 @@
 		
 		<!--<a-entity environment="preset: forest; dressingAmount: 500"></a-entity>-->
 		
-		<a-light type="ambient" color="#20303f" intensity="2"></a-light>
+		<!--<a-light type="ambient" color="#20303f" intensity="2"></a-light>
 		<a-light yellower type="directional" color="#f0e9d0" intensity="3" position="-1 10 6"></a-light>
 		<a-light bluer type="directional" color="#fff8ff" intensity="1.5" position="1 0 -0.5"></a-light>
-		<a-entity light="type: directional; color: #e1e3e4; intensity: 2" position="0 -1 0"></a-entity>
+		<a-entity light="type: directional; color: #e1e3e4; intensity: 2" position="0 -1 0"></a-entity>-->
     </a-scene>
 	
 	<script> console.log(THREE); </script>
