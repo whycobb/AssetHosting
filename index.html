@@ -13,14 +13,15 @@
 					const obj = this.el.getObject3D('mesh');
            				// Go over the submeshes and modify materials we want.
             				obj.traverse(node => {
-						console.log("Looking by name 003...");
+						console.log("Looking by name 004...");
 						if (node.name !== -1) {
 							console.log("Found Something");
 							//node.material.color.set('green');
 						}
 						if (node.name == 'GlTF_Test') {
-							console.log("Found It By Name");
-							node.material.color.set('#295989');
+							console.log("Found It By Name... Setting Env Map");
+							node.material.sphericalEnvMap.set("FITCIHDRI.png");
+							console.log("Successfully set EnvMap..?");
 						}
 						/**if (node.name.indexOf('GlTF_Test') !== -1) {
 							console.log("Found It by IndexOf");
