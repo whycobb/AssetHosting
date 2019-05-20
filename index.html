@@ -13,7 +13,7 @@
 					const obj = this.el.getObject3D('mesh');
            				// Go over the submeshes and modify materials we want.
             				obj.traverse(node => {
-						console.log("Looking by name 016...");
+						console.log("Looking by name 017...");
 						if (node.name !== -1) {
 							console.log("Found Something");
 							//node.material.color.set('green');
@@ -56,6 +56,8 @@
   		<a-sky src="#sky"></a-sky>	
 	    
 	    	<a-entity gltf-model="#testplate" modify-materials></a-entity>
+	    
+	    	<a-entity geometry="primitive: box" material="color: red; metalness: 1"></a-entity>
 		
 		<!--<a-entity environment="preset: forest; dressingAmount: 500"></a-entity>-->
 		
