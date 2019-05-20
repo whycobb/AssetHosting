@@ -3,50 +3,12 @@
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 	<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
 	<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
-	<script src="aframe-outline.js"></script>
 	<!--<script src="https://raw.github.com/mrdoob/three.js/master/build/three.min.js">-->
-	
-	<script>
-		//rework this so it checks the room's vertex colors and adjusts them, letting me tweak it without re-exporting from blender
-		AFRAME.registerComponent('multicolored-cube', {
-			dependencies: ['geometry'],
-			init: function() {
-				let mesh = this.el.getObject3D('mesh');
-				mesh.material = new THREE.MeshLambertMaterial();
-				let geom = mesh.geometry;
-				for (var i = 0; i < geom.faces.length; i++) {
-					let face = geom.faces[i]; 
-					face.color.setRGB(Math.random(), Math.random(), Math.random());
-				}
-				//geom.computeFaceNormals();
-				geom.colorsNeedUpdate = true;
-				
-				mesh.material.vertexColors = THREE.FaceColors;
-			}
-		});
-		
-		AFRAME.registerComponent('colored-mesh', {
-			dependencies: ['geometry'],
-			init: function() {
-				let mesh = this.el.getObject3D('mesh');
-				mesh.material = new THREE.MeshLambertMaterial();
-				let geom = mesh.geometry;
-				for (var i = 0; i < geom.faces.length; i++) {
-					let face = geom.faces[i]; 
-					face.color.setRGB(Math.random(), Math.random(), Math.random());
-				}
-				//geom.computeFaceNormals();
-				geom.colorsNeedUpdate = true;
-				
-				mesh.material.vertexColors = THREE.FaceColors;
-			}
-		});
-	</script>
   </head>
   <body>
 	
   
-    <a-scene outline stats background="color: black">
+    <a-scene stats background="color: black">
 		<a-entity position="10 0 16" rotation="0 60 0">
 			<a-camera></a-camera>
 		</a-entity>
@@ -80,13 +42,6 @@
 		</a-entity>
 	
 		
-		
-		<a-entity gltf-model="#office" rotation="0 0 0" scale="1 1 1" position="0 -2 0"> </a-entity>
-		
-		<a-entity gltf-model="#rbCube" rotation="0 -90 0" scale="1 1 1" position="5 -2 10">
-			<a-animation attribute="rotation" to="0 270 90" direction="alternate" dur="2000"
-				repeat="indefinite"></a-animation>
-		</a-entity>
 		
 		<!--<a-entity environment="preset: forest; dressingAmount: 500"></a-entity>-->
 		
