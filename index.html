@@ -13,17 +13,21 @@
 					const obj = this.el.getObject3D('mesh');
            				// Go over the submeshes and modify materials we want.
             				obj.traverse(node => {
-						console.log("Looking");
+						console.log("Looking by name 001...");
 						if (node.name !== -1) {
 							console.log("Found Something");
 							//node.material.color.set('green');
 						}
-						if (node.name == 'GLTF_Test') {
+						if (node.name == 'GlTF_Test') {
 							console.log("Found It By Name");
 							//node.material.color.set('green');
 						}
-						if (node.name.indexOf('GLTF_Test') !== -1) {
-							console.log("Found It");
+						if (node.name == 'GlTF_TestShape') {
+							console.log("Found It By NameShape");
+							//node.material.color.set('green');
+						}
+						if (node.name.indexOf('GlTF_Test') !== -1) {
+							console.log("Found It by IndexOf");
 							node.material.color.set('green');
 						}
             				});
