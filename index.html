@@ -63,18 +63,21 @@
     		
   		<a-sky src="#sky"></a-sky>	
 	    
-	    	<a-entity gltf-model="#testplate"
+	    	<a-entity id="Plate"
+			  gltf-model="#testplate"
 			  position="-1 1.6 0"
 			  modify-materials
 			  material="color: red; metalness: 1; sphericalEnvMap: #sky; roughness: 0.1">
 	    		</a-entity>
 	    
-	    	<a-entity geometry="primitive: box"
+	    	<a-entity id="Box1"
+			  geometry="primitive: box"
 			  position="1 1.6 0"
 			  material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.1">
 	    		</a-entity>
 	    
-	    	<a-entity geometry="primitive: box"
+	    	<a-entity id="Box2"
+			  geometry="primitive: box"
 			  position="3 1.6 0"
 			  material="color: #ccffff; metalness: 1; envMap: #FITCICube; roughness: 0.1">
 	    		</a-entity>
