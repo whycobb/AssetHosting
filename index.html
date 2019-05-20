@@ -4,6 +4,23 @@
 	<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
 	<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
 	<!--<script src="https://raw.github.com/mrdoob/three.js/master/build/three.min.js">-->
+	<script>
+      		AFRAME.registerComponent('modify-materials', {
+        		init: function () {
+         		 	// Wait for model to load.
+          			this.el.addEventListener('model-loaded', () => {
+					// Grab the mesh / scene.
+					const obj = this.el.getObject3D('mesh');
+           				// Go over the submeshes and modify materials we want.
+            				obj.traverse(node => {
+              					if (node.name.indexOf('ship') !== -1) {
+                					node.material.color.set('green');
+              					}
+            				});
+         			 });
+       			 }
+      		});
+    	</script>
   </head>
   <body>
 	
