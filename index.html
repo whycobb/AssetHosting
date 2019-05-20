@@ -14,6 +14,7 @@
            				// Go over the submeshes and modify materials we want.
             				obj.traverse(node => {
 						if (node.name.indexOf('GLTF_Test') !== -1) {
+							Console.log(Foiund It);
 							node.material.color.set('green');
 						}
             				});
