@@ -26,7 +26,7 @@
 							node.material.emissive.set('#992299');
 							//node.material.metalness = 0;
 							//node.material.sphericalEnvMap.set('FITCIHDRI.png');
-							console.log("Successfully set EnvMap..?");
+							//console.log("Successfully set EnvMap..?");
 						}
 						/**if (node.name.indexOf('GlTF_Test') !== -1) {
 							console.log("Found It by IndexOf");
@@ -47,54 +47,54 @@
 			<a-asset-item id="testplate" src="SpinningPlate_002.glb"></a-asset-item>
 			<img id="sky" src="FITCIHDRI.png">
 			<a-cubemap id="FITCICube">
-		      		<img src="FITCICube/posx.png">
-		      		<img src="FITCICube/negx.png">
-			      	<img src="FITCICube/posy.png">
-			      	<img src="FITCICube/negy.png">
-			      	<img src="FITCICube/posz.png">
-			      	<img src="FITCICube/negz.png">
-		    	</a-cubemap>
+				<img src="FITCICube/posx.png">
+				<img src="FITCICube/negx.png">
+				<img src="FITCICube/posy.png">
+				<img src="FITCICube/negy.png">
+				<img src="FITCICube/posz.png">
+				<img src="FITCICube/negz.png">
+			</a-cubemap>
 		</a-assets>
 	    
-	    	<a-entity position="0 0 3" rotation="0 0 0">
+	  <a-entity position="0 0 3" rotation="0 0 0">
 			<a-camera></a-camera>
 		</a-entity>
 	
 	
 		
     		
-  		<a-sky src="#sky"></a-sky>	
+		<a-sky src="#sky"></a-sky>	
 	    
-	    	<a-entity id="Plate"
-			  gltf-model="#testplate"
-			  position="-1 1.6 0"
-			  modify-materials
-			  material="color: red; metalness: 1; sphericalEnvMap: #sky; roughness: 0.1">
-	    		</a-entity>
-	    
-	    	<a-entity id="Box1"
-			  geometry="primitive: box"
-			  position="1 1.6 -3"
-			  material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.2">
-	    		</a-entity>
-	    
-	    	<a-entity id="Box3"
-			  geometry="primitive: box"
-			  position="1 1.6 0"
-			  material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.3">
-	    		</a-entity>
-	    
-	    	<a-entity id="Box4"
-			  geometry="primitive: box"
-			  position="-3 1.6 0"
-			  material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.3">
-	    		</a-entity>
-	    
-	    	<a-entity id="Box2"
-			  geometry="primitive: box"
-			  position="3 1.6 0"
-			  material="color: #ccffff; metalness: 1; envMap: #FITCICube; roughness: 0.5">
-	    		</a-entity>
+		<a-entity id="Plate"
+			gltf-model="#testplate"
+			position="-1 1.6 0"
+			modify-materials
+			material="color: red; metalness: 1; sphericalEnvMap: #sky; roughness: 0.1">
+			</a-entity>
+
+		<a-entity id="Box1"
+			geometry="primitive: box"
+			position="1 1.6 -3"
+			material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.2">
+			</a-entity>
+			
+		<a-entity id="Box2"
+			geometry="primitive: box"
+			position="3 1.6 0"
+			material="color: #ccffff; metalness: 1; envMap: #FITCICube; roughness: 0.5">
+			</a-entity>
+
+		<a-entity id="Box3"
+			geometry="primitive: box"
+			position="1 1.6 0"
+			material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.3">
+			</a-entity>
+
+		<a-entity id="Box4"
+			geometry="primitive: box"
+			position="-3 1.6 0"
+			material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.3">
+			</a-entity>
 		
 		<!--<a-entity environment="preset: forest; dressingAmount: 500"></a-entity>-->
 		
