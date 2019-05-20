@@ -13,7 +13,7 @@
 					const obj = this.el.getObject3D('mesh');
            				// Go over the submeshes and modify materials we want.
             				obj.traverse(node => {
-						console.log("Looking by name 024...");
+						console.log("Looking by name 025...");
 						if (node.name !== -1) {
 							console.log("Found Something");
 							//node.material.color.set('green');
@@ -71,12 +71,12 @@
 	    
 	    	<a-entity geometry="primitive: box"
 			  position="1 1.6 0"
-			  material="color: red; metalness: 1; sphericalEnvMap: #sky; roughness: 0.1">
+			  material="color: #ffcccc; metalness: 1; sphericalEnvMap: #sky; roughness: 0.1">
 	    		</a-entity>
 	    
 	    	<a-entity geometry="primitive: box"
 			  position="3 1.6 0"
-			  material="color: red; metalness: 1; envMap: #FITCICube; roughness: 0.1">
+			  material="color: #ccffff; metalness: 1; envMap: #FITCICube; roughness: 0.1">
 	    		</a-entity>
 		
 		<!--<a-entity environment="preset: forest; dressingAmount: 500"></a-entity>-->
