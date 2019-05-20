@@ -13,6 +13,7 @@
 					const obj = this.el.getObject3D('mesh');
            				// Go over the submeshes and modify materials we want.
             				obj.traverse(node => {
+						Console.log("Looking");
 						if (node.name.indexOf('GLTF_Test') !== -1) {
 							Console.log("Found It");
 							node.material.color.set('green');
