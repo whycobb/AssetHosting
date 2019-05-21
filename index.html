@@ -54,6 +54,7 @@
 				<img id="plateRough" src="objPlate/StripedMetalRough.jpg"></img>
 				
 				<img id="sky" src="FITCIHDRI.png">
+				<!--
 				<a-cubemap id="FITCICube">
 					<img src="FITCICube/posx.png">
 					<img src="FITCICube/negx.png">
@@ -61,7 +62,7 @@
 					<img src="FITCICube/negy.png">
 					<img src="FITCICube/posz.png">
 					<img src="FITCICube/negz.png">
-				</a-cubemap>
+				</a-cubemap>-->
 			</a-assets>
 
 		  	<a-entity position="0 0 3" rotation="0 0 0">
@@ -95,7 +96,6 @@
 					  src: #plateColor;
 					  metalnessMap: #plateMet;
 					  metalness: 1;
-					  envMap: #FITCICube;
 					  roughnessMap: #plateRough;
 					  roughness: 1;
 					  normalMap: #plateNormal"
@@ -109,7 +109,6 @@
 					  src: #plateColor;
 					  metalnessMap: #plateMet;
 					  metalness: 1;
-					  envMap: #FITCICube;
 					  roughnessMap: #plateRough;
 					  roughness: 1;
 					  normalMap: #plateNormal"
@@ -123,7 +122,6 @@
 				  	src: #plateColor;
 				  	metalnessMap: #plateMet;
 				  	metalness: 1;
-				  	envMap: #FITCICube;
 				  	roughnessMap: #plateRough;
 				  	roughness: 1;
 				  	normalMap: #plateNormal"
@@ -137,7 +135,6 @@
 					  src: #plateColor;
 					  metalnessMap: #plateMet;
 					  metalness: 1;
-					  envMap: #FITCICube;
 					  roughnessMap: #plateRough;
 					  roughness: 1;
 					  normalMap: #plateNormal"
@@ -165,13 +162,13 @@
 			<a-entity id="Box4"
 				geometry="primitive: sphere"
 				position="-3 1.3 0"
-				material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.1">
+				material="color: #ffcccc; metalness: 1; roughness: 0.1">
 				</a-entity>
 
 			<a-entity id="Box4"
 				geometry="primitive: sphere"
 				position="5 1.3 0"
-				material="color: #cccccc; metalness: 0; envMap: #FITCICube; roughness: 0.8">
+				material="color: #cccccc; metalness: 0; roughness: 0.8">
 				</a-entity>
 
 			<!--<a-entity environment="preset: forest; dressingAmount: 500"></a-entity>-->
