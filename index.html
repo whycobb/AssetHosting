@@ -24,11 +24,11 @@
 						const obj = this.el.getObject3D('mesh');
 						// Go over the submeshes and modify materials we want.
 						obj.traverse(node => {
-							console.log("Looking by name 059...");
+							console.log("Looking by name 060...");
 							if (node.isMesh) {
 								if (node.material && 'envMap' in node.material) {
 									console.log("Found envMap in mesh");
-									node.material.roughness = 1;
+									node.material.roughness = 0;
 									node.material.envMap = envMap;
 									node.material.needsUpdate = true;
 									console.log("Set envMap with DM code");
@@ -89,7 +89,7 @@
 					  metalness: 1;
 					  envMap: #FITCICube;
 					  roughnessMap: #plateRough;
-					  roughness: 1;
+					  roughness: 0;
 					  normalMap: #plateNormal"
 			     	position="1 1.3 0">
 				</a-obj-model>
