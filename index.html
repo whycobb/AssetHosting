@@ -16,13 +16,15 @@
 			    	]);
 			    	this.texture.format = THREE['RGBFormat'];
 				
+				const envMap = this.texture;
+				
          		 	// Wait for model to load.
           			this.el.addEventListener('model-loaded', () => {
 					// Grab the mesh / scene.
 					const obj = this.el.getObject3D('mesh');
            				// Go over the submeshes and modify materials we want.
             				obj.traverse(node => {
-						console.log("Looking by name 037...");
+						console.log("Looking by name 038...");
 						if (node.name !== -1) {
 							console.log("Found Something");
 							//node.material.color.set('green');
@@ -31,10 +33,13 @@
 							console.log("Found a mesh");
 							if (node.material && 'envMap' in node.material) {
 								console.log("Found envMap in mesh");
+								node.material.envMap = envMap;
+        							node.material.needsUpdate = true;
+								console.log("Set envMap with DM code");
 							}
 						}
 						if (node.name == 'GlTF_Test') {
-							console.log("Found It By Name... Setting Env Map");
+							//console.log("Found It By Name... Setting Env Map");
 							//node.material.emissive.set('#992299');
 							//node.material.metalness = 0;
 							//node.material.sphericalEnvMap.set('FITCIHDRI.png');
