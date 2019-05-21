@@ -24,7 +24,7 @@
 						const obj = this.el.getObject3D('mesh');
 						// Go over the submeshes and modify materials we want.
 						obj.traverse(node => {
-							console.log("Looking by name 054...");
+							console.log("Looking by name 055...");
 							if (node.isMesh) {
 								if (node.material && 'envMap' in node.material) {
 									console.log("Found envMap in mesh");
@@ -47,6 +47,9 @@
 				<a-asset-item id="testplate" src="SpinningPlate_002.glb"></a-asset-item>
 				<a-asset-item id="testplateOBJ" src="objPlate/OBJPlate_rot.obj"></a-asset-item>
 				<img id="plateColor" src="objPlate/StripedMetalColor.jpg"></img>
+				<img id="plateMet" src="objPlate/StripedMetalMet.jpg"></img>
+				<img id="plateNormal" src="objPlate/StripedMetalNormal.jpg"></img>
+				<img id="plateRough" src="objPlate/StripedMetalRough.jpg"></img>
 				
 				<img id="sky" src="FITCIHDRI.png">
 				<a-cubemap id="FITCICube">
@@ -73,7 +76,7 @@
 		
 			<a-obj-model
 			     	src="#testplateOBJ"
-			     	material="shader: flat; src: #plateColor"
+			     	material="shader: flat; src: #plateColor; metalness: #plateMet"
 			     	position="1 1.3 0">
 					</a-obj-model>
 
