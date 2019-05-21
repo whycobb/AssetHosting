@@ -24,7 +24,7 @@
 						const obj = this.el.getObject3D('mesh');
 						// Go over the submeshes and modify materials we want.
 						obj.traverse(node => {
-							console.log("Looking by name 044...");
+							console.log("Looking by name 045...");
 							if (node.isMesh) {
 								if (node.material && 'envMap' in node.material) {
 									console.log("Found envMap in mesh");
@@ -64,37 +64,37 @@
 
 			<a-entity id="Plate"
 				gltf-model="#testplate"
-				position="-1 1.6 0"
+				position="-1 1.3 0"
 				modify-materials>
 				</a-entity>
 
 			<a-entity id="Box1"
 				geometry="primitive: box"
-				position="1 1.6 -3"
+				position="1 1.3 -3"
 				material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.1">
 				</a-entity>
 
 			<a-entity id="Box2"
 				geometry="primitive: box"
-				position="3 1.6 0"
+				position="3 1.3 0"
 				material="color: #ccffff; metalness: 1; envMap: #FITCICube; roughness: 0.1">
 				</a-entity>
 
 			<a-entity id="Box3"
 				geometry="primitive: box"
-				position="1 1.6 0"
+				position="1 1.3 0"
 				material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.1">
 				</a-entity>
 
 			<a-entity id="Box4"
 				geometry="primitive: sphere"
-				position="-3 1.6 0"
+				position="-3 1.3 0"
 				material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.1">
 				</a-entity>
 
 			<!--<a-entity environment="preset: forest; dressingAmount: 500"></a-entity>-->
 
-			<a-light type="ambient" color="#ffffff" intensity="1"></a-light>
+			<a-light type="ambient" color="#ffffff" intensity="0"></a-light>
 			<!--<a-light yellower type="directional" color="#ffffff" intensity="3" position="-1 10 6"></a-light>
 			<a-light bluer type="directional" color="#fff8ff" intensity="1.5" position="1 0 -0.5"></a-light>
 			<a-entity light="type: directional; color: #e1e3e4; intensity: 2" position="0 -1 0"></a-entity>-->
