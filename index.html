@@ -24,7 +24,7 @@
 						const obj = this.el.getObject3D('mesh');
 						// Go over the submeshes and modify materials we want.
 						obj.traverse(node => {
-							console.log("Looking by name 061...");
+							console.log("Looking by name 062...");
 							if (node.isMesh) {
 								if (node.material && 'envMap' in node.material) {
 									console.log("Found envMap in mesh");
@@ -41,7 +41,7 @@
 		</script>
 	</head>
 	<body>
-		<a-scene stats background="color: black">
+		<a-scene stats background="color: black" light="defaultLightsEnabled: false">
 			<a-assets>
 				<!--<img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">-->
 				<a-asset-item id="testplate" src="SpinningPlate_002.glb"></a-asset-item>
