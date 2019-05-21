@@ -9,7 +9,7 @@
 				init: function () {
 					const filepath = "HDRcube/";
 
-					this.texture = new THREE.CubeTextureLoader().load([
+					this.texture = new THREE.HDRCubeTextureLoader().load([
 						filepath + 'posx.hdr', filepath + 'negx.hdr',
 						filepath + 'posy.hdr', filepath + 'negy.hdr',
 						filepath + 'posz.hdr', filepath + 'negz.hdr'
@@ -31,7 +31,7 @@
 						const obj = this.el.getObject3D('mesh');
 						// Go over the submeshes and modify materials we want.
 						obj.traverse(node => {
-							console.log("Looking by name 074...");
+							console.log("Looking by name 075...");
 							if (node.isMesh) {
 								if (node.material && 'envMap' in node.material) {
 									console.log("Found envMap in mesh");
