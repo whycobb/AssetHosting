@@ -7,21 +7,30 @@
 	<script>
       		AFRAME.registerComponent('modify-materials', {
         		init: function () {
+				const filepath = "FITCICubebright";
+
+				this.texture = new THREE.CubeTextureLoader().load([
+			      		filepath + 'posx.' + data.extension, filepath + 'negx.' + data.extension,
+			      		filepath + 'posy.' + data.extension, filepath + 'negy.' + data.extension,
+			      		filepath + 'posz.' + data.extension, filepath + 'negz.' + data.extension
+			    	]);
+			    	this.texture.format = THREE[data.format];
+				
          		 	// Wait for model to load.
           			this.el.addEventListener('model-loaded', () => {
 					// Grab the mesh / scene.
 					const obj = this.el.getObject3D('mesh');
            				// Go over the submeshes and modify materials we want.
             				obj.traverse(node => {
-						console.log("Looking by name 035...");
+						console.log("Looking by name 036...");
 						if (node.name !== -1) {
 							console.log("Found Something");
 							//node.material.color.set('green');
 						}
 						if (node.isMesh) {
 							console.log("Found a mesh");
-							if (node.material && 'sphericalEnvMap' in node.material) {
-								console.log("Found sphericalEnvMap in mesh");
+							if (node.material && 'envMap' in node.material) {
+								console.log("Found envMap in mesh");
 							}
 						}
 						if (node.name == 'GlTF_Test') {
