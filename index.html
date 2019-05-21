@@ -7,20 +7,20 @@
 		<script>
 			AFRAME.registerComponent('modify-materials', {
 				init: function () {
-					/**const filepath = "HDRcube/";
+					const filepath = "HDRcube/";
 
 					this.texture = new THREE.CubeTextureLoader().load([
 						filepath + 'posx.hdr', filepath + 'negx.hdr',
 						filepath + 'posy.hdr', filepath + 'negy.hdr',
 						filepath + 'posz.hdr', filepath + 'negz.hdr'
-					]);*/
-					const filepath = "FITCICubebright/";
+					]);
+					/**const filepath = "FITCICubebright/";
 
 					this.texture = new THREE.CubeTextureLoader().load([
 						filepath + 'posx.png', filepath + 'negx.png',
 						filepath + 'posy.png', filepath + 'negy.png',
 						filepath + 'posz.png', filepath + 'negz.png'
-					]);
+					]);**/
 					this.texture.format = THREE['RGBFormat'];
 
 					const envMap = this.texture;
@@ -31,7 +31,7 @@
 						const obj = this.el.getObject3D('mesh');
 						// Go over the submeshes and modify materials we want.
 						obj.traverse(node => {
-							console.log("Looking by name 072...");
+							console.log("Looking by name 073...");
 							if (node.isMesh) {
 								if (node.material && 'envMap' in node.material) {
 									console.log("Found envMap in mesh");
