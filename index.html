@@ -13,13 +13,16 @@
 					const obj = this.el.getObject3D('mesh');
            				// Go over the submeshes and modify materials we want.
             				obj.traverse(node => {
-						console.log("Looking by name 033...");
+						console.log("Looking by name 034...");
 						if (node.name !== -1) {
 							console.log("Found Something");
 							//node.material.color.set('green');
 						}
 						if (node.isMesh) {
 							console.log("Found a mesh");
+							if (node.material && 'envMap' in node.material) {
+								console.log("Found envMap in mesh");
+							}
 						}
 						if (node.name == 'GlTF_Test') {
 							console.log("Found It By Name... Setting Env Map");
