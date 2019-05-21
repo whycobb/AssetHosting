@@ -24,7 +24,7 @@
 						const obj = this.el.getObject3D('mesh');
 						// Go over the submeshes and modify materials we want.
 						obj.traverse(node => {
-							console.log("Looking by name 069...");
+							console.log("Looking by name 070...");
 							if (node.isMesh) {
 								if (node.material && 'envMap' in node.material) {
 									console.log("Found envMap in mesh");
@@ -161,13 +161,13 @@
 			<a-entity id="Box4"
 				geometry="primitive: sphere"
 				position="-3 1.3 0"
-				material="color: #ffcccc; metalness: 1; roughness: 0.1">
+				material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.1">
 				</a-entity>
 
 			<a-entity id="Box4"
 				geometry="primitive: sphere"
 				position="5 1.3 0"
-				material="color: #cccccc; metalness: 0; roughness: 0.8">
+				material="color: #cccccc; metalness: 0; envMap: #FITCICube; roughness: 0.8">
 				</a-entity>
 
 			<!--<a-entity environment="preset: forest; dressingAmount: 500"></a-entity>-->
