@@ -8,6 +8,7 @@
 		<script>
 			AFRAME.registerComponent('modify-materials', {
 				init: function () {
+					console.log("Build 001");
 					const filepath = "HDRcube/";
 
 					this.texture = new THREE.HDRCubeTextureLoader().load([
