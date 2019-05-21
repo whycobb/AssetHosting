@@ -24,7 +24,7 @@
 						const obj = this.el.getObject3D('mesh');
 						// Go over the submeshes and modify materials we want.
 						obj.traverse(node => {
-							console.log("Looking by name 051...");
+							console.log("Looking by name 052...");
 							if (node.isMesh) {
 								if (node.material && 'envMap' in node.material) {
 									console.log("Found envMap in mesh");
@@ -71,10 +71,15 @@
 				modify-materials>
 				</a-entity>
 		
+			<a-obj-model
+			     	src="#objPlate"
+			     	material="shader: flat; src: #plateColor"
+			     	position="2 1.3 0">
+					</a-obj-model>
+		
 			<a-entity id="objPlate"
 				obj-model="#testplateOBJ"
-				position="2 1.3 0"
-				material="src: objPlate/StripedMetalColor.jpg; metalness: 0.5">
+				position="2 1.3 0">
 				</a-entity>
 		
 			<a-entity id="objPlate2"
