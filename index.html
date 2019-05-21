@@ -52,70 +52,65 @@
 		</script>
 	</head>
 	<body>
-	
-  
-    <a-scene stats background="color: black">
-		<a-assets>
-			<!--<img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">-->
-			<a-asset-item id="testplate" src="SpinningPlate_002.glb"></a-asset-item>
-			<img id="sky" src="FITCIHDRI.png">
-			<a-cubemap id="FITCICube">
-				<img src="FITCICube/posx.png">
-				<img src="FITCICube/negx.png">
-				<img src="FITCICube/posy.png">
-				<img src="FITCICube/negy.png">
-				<img src="FITCICube/posz.png">
-				<img src="FITCICube/negz.png">
-			</a-cubemap>
-		</a-assets>
-	    
-	  <a-entity position="0 0 3" rotation="0 0 0">
-			<a-camera></a-camera>
-		</a-entity>
-	
-	
-		
-    		
-		<a-sky src="#sky"></a-sky>	
-	    
-		<a-entity id="Plate"
-			gltf-model="#testplate"
-			position="-1 1.6 0"
-			modify-materials>
-			</a-entity>
+		<a-scene stats background="color: black">
+			<a-assets>
+				<!--<img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">-->
+				<a-asset-item id="testplate" src="SpinningPlate_002.glb"></a-asset-item>
+				<img id="sky" src="FITCIHDRI.png">
+				<a-cubemap id="FITCICube">
+					<img src="FITCICube/posx.png">
+					<img src="FITCICube/negx.png">
+					<img src="FITCICube/posy.png">
+					<img src="FITCICube/negy.png">
+					<img src="FITCICube/posz.png">
+					<img src="FITCICube/negz.png">
+				</a-cubemap>
+			</a-assets>
 
-		<a-entity id="Box1"
-			geometry="primitive: box"
-			position="1 1.6 -3"
-			material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.1">
-			</a-entity>
+		  	<a-entity position="0 0 3" rotation="0 0 0">
+				<a-camera></a-camera>
+				</a-entity>
 			
-		<a-entity id="Box2"
-			geometry="primitive: box"
-			position="3 1.6 0"
-			material="color: #ccffff; metalness: 1; envMap: #FITCICube; roughness: 0.1">
-			</a-entity>
+			<a-sky src="#sky"></a-sky>	
 
-		<a-entity id="Box3"
-			geometry="primitive: box"
-			position="1 1.6 0"
-			material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.1">
-			</a-entity>
+			<a-entity id="Plate"
+				gltf-model="#testplate"
+				position="-1 1.6 0"
+				modify-materials>
+				</a-entity>
 
-		<a-entity id="Box4"
-			geometry="primitive: sphere"
-			position="-3 1.6 0"
-			material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.1">
-			</a-entity>
-		
-		<!--<a-entity environment="preset: forest; dressingAmount: 500"></a-entity>-->
-		
-		<a-light type="ambient" color="#20303f" intensity="1"></a-light>
-		<a-light yellower type="directional" color="#ffffff" intensity="3" position="-1 10 6"></a-light>
-		<!--<a-light bluer type="directional" color="#fff8ff" intensity="1.5" position="1 0 -0.5"></a-light>
-		<a-entity light="type: directional; color: #e1e3e4; intensity: 2" position="0 -1 0"></a-entity>-->
-    </a-scene>
-	
-	<script> console.log(THREE); </script>
-  </body>
+			<a-entity id="Box1"
+				geometry="primitive: box"
+				position="1 1.6 -3"
+				material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.1">
+				</a-entity>
+
+			<a-entity id="Box2"
+				geometry="primitive: box"
+				position="3 1.6 0"
+				material="color: #ccffff; metalness: 1; envMap: #FITCICube; roughness: 0.1">
+				</a-entity>
+
+			<a-entity id="Box3"
+				geometry="primitive: box"
+				position="1 1.6 0"
+				material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.1">
+				</a-entity>
+
+			<a-entity id="Box4"
+				geometry="primitive: sphere"
+				position="-3 1.6 0"
+				material="color: #ffcccc; metalness: 1; envMap: #FITCICube; roughness: 0.1">
+				</a-entity>
+
+			<!--<a-entity environment="preset: forest; dressingAmount: 500"></a-entity>-->
+
+			<a-light type="ambient" color="#20303f" intensity="1"></a-light>
+			<a-light yellower type="directional" color="#ffffff" intensity="3" position="-1 10 6"></a-light>
+			<!--<a-light bluer type="directional" color="#fff8ff" intensity="1.5" position="1 0 -0.5"></a-light>
+			<a-entity light="type: directional; color: #e1e3e4; intensity: 2" position="0 -1 0"></a-entity>-->
+		</a-scene>
+
+		<script> console.log(THREE); </script>
+	</body>
 </html>
