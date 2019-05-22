@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<script> console.log("Build 027"); </script>
+		<script> console.log("Build 028"); </script>
 		<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.misc.min.js"></script>
 		<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
@@ -35,7 +35,7 @@
 					*/
 					
 					
-					const filepath = "FITCICubebright/";
+					const filepath = "FITCICube/";
 					this.texture = new THREE.CubeTextureLoader().load([
 						filepath + 'posx.png', filepath + 'negx.png',
 						filepath + 'posy.png', filepath + 'negy.png',
@@ -100,11 +100,11 @@
 			
 			<a-sky src="#sky"></a-sky>
 
-			<!--<a-entity id="Plate5"
+			<a-entity id="Plate5"
 				gltf-model="#testplate_005"
-				position="0 1.4 0"
+				position="1 1.4 0"
 				modify-materials>
-				</a-entity>-->
+				</a-entity>
 
 			<a-obj-model
 			     	src="#testplateOBJ"
@@ -117,7 +117,7 @@
 					  roughnessMap: #plateRough;
 					  roughness: 1;
 					  normalMap: #plateNormal"
-			     	position="0 1.4 0">
+			     	position="-1 1.4 0">
 				</a-obj-model>
 
 			<!--
