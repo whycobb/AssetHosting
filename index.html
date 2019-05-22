@@ -59,6 +59,7 @@
 								if (node.material && 'envMap' in node.material) {
 									console.log("Found envMap in mesh");
 									node.material.roughness = 0;
+									node.material.src = 0;
 									node.material.envMap = envMap;
 									node.material.needsUpdate = true;
 									console.log("Set envMap with DM code");
