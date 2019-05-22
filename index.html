@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<script> console.log("Build 006"); </script>
+		<script> console.log("Build 007"); </script>
 		<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.misc.min.js"></script>
 		<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
@@ -10,9 +10,9 @@
 		<script>
 			AFRAME.registerComponent('modify-materials', {
 				init: function () {
-					console.log("Build 006");
 					const filepath = "HDRcube/";
 					
+					/**
 					//current problem: can't get the HDR cube loader to work. Think I need to import
 					//	all of three.js for it to hook into
 					this.texture = new THREE.HDRCubeTextureLoader().load([
@@ -20,15 +20,15 @@
 						filepath + 'posy.hdr', filepath + 'negy.hdr',
 						filepath + 'posz.hdr', filepath + 'negz.hdr'
 					]);
+					*/
 					
-					
-					/**const filepath = "FITCICubebright/";
+					const filepath = "FITCICubebright/";
 
 					this.texture = new THREE.CubeTextureLoader().load([
 						filepath + 'posx.png', filepath + 'negx.png',
 						filepath + 'posy.png', filepath + 'negy.png',
 						filepath + 'posz.png', filepath + 'negz.png'
-					]);**/
+					]);
 					//this.texture.format = THREE['RGBFormat'];
 
 					const envMap = this.texture;
