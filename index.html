@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<script> console.log("Build 014"); </script>
+		<script> console.log("Build 015"); </script>
 		<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.misc.min.js"></script>
 		<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
@@ -58,7 +58,7 @@
 							if (node.isMesh) {
 								if (node.material && 'envMap' in node.material) {
 									console.log("Found envMap in mesh");
-									node.material.roughness = 0;
+									//node.material.roughness = 0;
 									node.material.src = 0;
 									node.material.envMap = envMap;
 									node.material.needsUpdate = true;
