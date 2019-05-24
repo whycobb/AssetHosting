@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<script> console.log("Build 056 - trying to blur it still"); </script>
+		<script> console.log("Build 057 - trying to blur it still"); </script>
 		<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.misc.min.js"></script>
 		<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
@@ -13,9 +13,10 @@
 			AFRAME.registerComponent('modify-materials', {
 				init: function () {
 					const filepath = "FITCIHDRI/";
-					const envMap;
+					var tempEnvMap;
+					var hdrCubeRenderTarget;
 					var renderer = new THREE.WebGLRenderer();
-					const hdrCubeMap = new THREE.HDRCubeTextureLoader().load(THREE.UnsignedByteType, [
+					var hdrCubeMap = new THREE.HDRCubeTextureLoader().load(THREE.UnsignedByteType, [
 						filepath + 'posx.hdr', filepath + 'negx.hdr',
 						filepath + 'posy.hdr', filepath + 'negy.hdr',
 						filepath + 'posz.hdr', filepath + 'negz.hdr'],
@@ -30,10 +31,10 @@
 							pmremGenerator.dispose();
 							pmremCubeUVPacker.dispose();
 						
-							const envMap = hdrCubeRenderTarget ? hdrCubeRenderTarget.texture : null;
+							tempEnvMap = hdrCubeRenderTarget ? hdrCubeRenderTarget.texture : null;
 						}
 					);
-					//const envMap = tempEnvMap;
+					const envMap = tempEnvMap;
 					
 					
 					/**
