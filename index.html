@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<script> console.log("Build 062 - trying to blur it still"); </script>
+		<script> console.log("Build 063 - trying to blur it still"); </script>
 		<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.misc.min.js"></script>
 		<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
@@ -12,6 +12,7 @@
 		<script>
 			AFRAME.registerComponent('modify-materials', {
 				init: function () {
+					var el = this.el;
 					const filepath = "FITCIHDRI/";
 					var tempEnvMap;
 					var hdrCubeRenderTarget;
@@ -36,12 +37,13 @@
 							if (hdrCubeRenderTarget) console.log("Render Target is true");
 							else console.log("Render Target is false");
 							tempEnvMap = hdrCubeRenderTarget ? hdrCubeRenderTarget.texture : null;
+							el.emit("cubeMapComplete");
 						}
 					);
-					console.log("Initialized var hdrCubeMap");
+					/**console.log("Initialized var hdrCubeMap");
 					const envMap = tempEnvMap;
 					if (envMap) console.log("envMap is true");
-					else console.log("envMap is false");
+					else console.log("envMap is false");*/
 					
 					
 					/**
@@ -56,9 +58,9 @@
 					*/
 					
 					// Wait for model to load.
-					this.el.addEventListener('model-loaded', () => {
+					el.addEventListener('cubeMapComplete', () => {
 						// Grab the mesh / scene.
-						const obj = this.el.getObject3D('mesh');
+						const obj = el.getObject3D('mesh');
 						// Go over the submeshes and modify materials we want.
 						obj.traverse(node => {
 							console.log("Looking by name...");
