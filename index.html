@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<script> console.log("Build 052 - trying to blur it still"); </script>
+		<script> console.log("Build 053 - trying to blur it still"); </script>
 		<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.misc.min.js"></script>
 		<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
@@ -13,7 +13,7 @@
 			AFRAME.registerComponent('modify-materials', {
 				init: function () {
 					const filepath = "FITCIHDRI/";
-					const envMap = null;
+					var tempEnvMap = null;
 					var renderer = new THREE.WebGLRenderer();
 					const hdrCubeMap = new THREE.HDRCubeTextureLoader().load(THREE.UnsignedByteType, [
 						filepath + 'posx.hdr', filepath + 'negx.hdr',
@@ -30,10 +30,10 @@
 							pmremGenerator.dispose();
 							pmremCubeUVPacker.dispose();
 						
-							envMap = hdrCubeRenderTarget ? hdrCubeRenderTarget.texture : null;
+							tempEnvMap = hdrCubeRenderTarget ? hdrCubeRenderTarget.texture : null;
 						}
 					);
-					//const envMap = hdrCubeMap;
+					const envMap = hdrCubeMap;
 					
 					
 					/**
