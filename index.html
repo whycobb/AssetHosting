@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<script> console.log("Build 059 - trying to blur it still"); </script>
+		<script> console.log("Build 060 - trying to blur it still"); </script>
 		<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.misc.min.js"></script>
 		<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
@@ -16,11 +16,13 @@
 					var tempEnvMap;
 					var hdrCubeRenderTarget;
 					var renderer = new THREE.WebGLRenderer();
+					console.log("Initializing var hdrCubeMap");
 					var hdrCubeMap = new THREE.HDRCubeTextureLoader().load(THREE.UnsignedByteType, [
 						filepath + 'posx.hdr', filepath + 'negx.hdr',
 						filepath + 'posy.hdr', filepath + 'negy.hdr',
 						filepath + 'posz.hdr', filepath + 'negz.hdr'],
 						function () {
+							console.log("Entering hdrCubeMap's onLoad() function");
 							var pmremGenerator = new THREE.PMREMGenerator( hdrCubeMap );
 							pmremGenerator.update( renderer );
 							var pmremCubeUVPacker = new THREE.PMREMCubeUVPacker( pmremGenerator.cubeLods );
@@ -114,6 +116,7 @@
 				modify-materials>
 				</a-entity>
 			
+			<!--
 			<a-obj-model
 				src="#testplateOBJ"
 				material="shader: standard;
@@ -126,7 +129,7 @@
 				normalMap: #plateNormal"
 				position="-1 1.4 0"
 				modify-materials>
-				</a-obj-model>
+				</a-obj-model> -->
 			
 			<a-entity light="type: directional; color: #eef; intensity: 5" position="0 10 1"></a-entity>
 			<a-entity light="type: directional; color: #ffe; intensity: 0.1" position="0 -10 1"></a-entity>
